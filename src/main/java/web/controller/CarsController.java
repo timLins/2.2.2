@@ -21,7 +21,7 @@ public class CarsController {
 
     @GetMapping()
     public String index(@RequestParam(value = "count",defaultValue = "5") int count , Model model ) {
-        model.addAttribute("cars", carDAO.index(count));
+        model.addAttribute("cars", carDAO.getCars(count));
         return "cars";
     }
 }

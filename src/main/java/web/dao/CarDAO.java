@@ -20,16 +20,22 @@ public class CarDAO  {
         cars.add(new Car("Ferrari",220,"Yellow"));
     }
 
-    public List<Car> index(int count) {
+    public List<Car> getCars(int count) {
 
-        List<Car> countOfCar = new ArrayList<>();
         if (count < cars.size()) {
-            for ( int i = 0; i < count; i++ ) {
-                countOfCar.add(cars.get(i));
-            }
-            return countOfCar;
-        }
-        else return cars;}
+            return cars.subList(0, count);
+        } else return cars;
+    }
+
+//        List<Car> countOfCar = new ArrayList<>();
+//        if (count < cars.size()) {
+//            for ( int i = 0; i < count; i++ ) {
+//                countOfCar.add(cars.get(i));
+//            }
+//            return countOfCar;
+//        }
+//        else return cars;}
+
 
 
 //    public List<Car> show (int count ) {
